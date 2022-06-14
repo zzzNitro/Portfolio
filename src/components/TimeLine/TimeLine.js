@@ -66,7 +66,8 @@ const Timeline = () => {
 
   return (
     <Section id="about">
-      <SectionTitle>About Me</SectionTitle>
+      <SectionDivider></SectionDivider>
+      <SectionTitle main>About Me</SectionTitle>
       <SectionText>
         I'm a teamplayer looking forward to learn and improve my skills in a growth focused environment. I have worked for many companies in different industries and in different roles, and I am grateful to have been able to take to coding and hope to add value as a developer to the community.
       </SectionText>
