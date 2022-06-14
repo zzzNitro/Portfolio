@@ -117,7 +117,7 @@ background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 10
 opacity: ${({ disabled }) => disabled ? '.5' : '1'};
 transition: .4s ease;
 font-size: ${({ alt }) => alt ? '20px' : '24px'};
-font-weight: 600;
+font-weight: 500;
 align-items: center;
 justify-content: center;
 cursor: pointer;
