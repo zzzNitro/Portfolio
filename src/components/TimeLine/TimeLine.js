@@ -66,9 +66,9 @@ const Timeline = () => {
 
   return (
     <Section id="about">
-      <SectionTitle>About Pablo</SectionTitle>
+      <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        Pablo is a teamplayer that looks forward to learn and improve his skills in a growth focused environment. He has worked for many companies in different industries and in different roles, and for this chance he is grateful to have been able to take to coding and hopes to add value as a developer to the community.
+        I'm a teamplayer looking forward to learn and improve my skills in a growth focused environment. I have worked for many companies in different industries and in different roles, and I am grateful to have been able to take to coding and hope to add value as a developer to the community.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={() => handleScroll()}>
         <>
