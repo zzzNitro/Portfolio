@@ -17,11 +17,12 @@ import {
     Section,
     SectionDivider,
     SectionTitle,
+    Button
 } from '../../styles/GlobalComponents'
 import { projects } from '../../constants/projects'
 
 const Projects = () => (
-    <Section nopadding id="projects">
+    <Section  id="projects">
         <SectionDivider></SectionDivider>
         <SectionTitle main>Projects</SectionTitle>
         <GridContainer>

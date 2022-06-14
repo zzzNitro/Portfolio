@@ -14,7 +14,7 @@ const projects = [
         description:
             'Created an app that allows users to send personality quizzes to candidates and get a personality feedback based on Big Five, while keeping track of results on a dashboard.',
         image: '/images/pfeed.png',
-        tags: ['React', 'REST API', 'Django', 'MongoDB'],
+        tags: ['React', 'REST', 'Django', 'MongoDB'],
         source: '',
         visit: 'https://dvmfront-7058c.web.app/',
         id: 1,

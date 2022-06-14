@@ -17,8 +17,7 @@ import {
 const Technologies = () => (
   <Section id="tech">
     <SectionDivider></SectionDivider>
-    <br />
-    <SectionTitle>Technologies</SectionTitle>
+    <SectionTitle main>Technologies</SectionTitle>
     <SectionText>
       I've trained in Henry bootcamp for fullstack development with JavaScript and I have learned Python on the side. Django is my favorite framework for backend development.
     </SectionText>
