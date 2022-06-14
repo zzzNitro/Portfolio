@@ -45,8 +45,8 @@ const projects = [
             'A mobile-first, responsive, sleek website to show off my skills.',
         image: '/images/portfolio.png',
         tags: ['NextJS', 'Node', 'Cypress', 'Happo.io'],
-        source: 'https://github.com/nadvolod/js-code/tree/master/dev-portfolio',
-        visit: 'https://nikolay.tech',
+        source: 'https://github.com/zzzNitro/Portfolio',
+        visit: 'https://pbreactprtfl.herokuapp.com/',
         id: 4,
     },
 ]
