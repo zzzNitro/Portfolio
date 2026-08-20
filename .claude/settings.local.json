@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(PORT=4123 nohup npm start)",
+      "Bash(disown)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 5 http://localhost:4123/)"
+    ]
+  }
+}
