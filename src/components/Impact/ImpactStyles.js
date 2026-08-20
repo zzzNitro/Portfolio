@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Card } from "../../styles/GlobalComponents"
 
 export const Boxes = styled.div`
   width: 100%;
@@ -20,9 +21,7 @@ export const Boxes = styled.div`
   }
 `
 
-export const Box = styled.div`
-  background: #212D45;
-  border-radius: 12px;
+export const Box = styled(Card)`
   height: 144px;
   padding: 24px;
   @media ${props => props.theme.breakpoints.lg} {
@@ -47,7 +46,7 @@ export const BoxNum = styled.h5`
   font-size: 36px;
   line-height: 40px;
   letter-spacing: 0.01em;
-  color: #FFFFFF;
+  color: ${props => props.theme.colors.accent1};
   margin-bottom: 8px;
   @media ${props => props.theme.breakpoints.md} {
     font-size: 28px;

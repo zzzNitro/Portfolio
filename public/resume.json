@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "basics": {
+    "name": "Pablo Benito",
+    "label": "Full Stack Developer",
+    "email": "pablo.benito@rocketmail.com",
+    "url": "https://www.dexforge.com",
+    "summary": "Full stack developer with 3+ years building production systems: Go microservices at Mercado Libre and Python/Django APIs at an early-stage health startup. I ship end-to-end features across React, Next.js, TypeScript, and PostgreSQL. AI development tools such as Claude Code and Cursor are part of my daily workflow, applied with a clear understanding of what the code is doing.",
+    "location": {
+      "city": "Santiago",
+      "countryCode": "CL"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "zzzNitro",
+        "url": "https://github.com/zzzNitro"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "pablo-benito-nunez",
+        "url": "https://www.linkedin.com/in/pablo-benito-nunez/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Mercado Libre",
+      "position": "Software Developer",
+      "startDate": "2023-03",
+      "endDate": "",
+      "location": "Santiago, Chile",
+      "summary": "Go microservices serving internal teams.",
+      "highlights": [
+        "Reduced response time ~50% across production Go microservices serving around 8k users by refactoring aggregator endpoints to use goroutines",
+        "Cut technical debt and shortened new-developer onboarding from 6 to 4 weeks by establishing scalable, maintainable architecture patterns, rigorous peer review, and clear documentation",
+        "Increased test coverage from 85% to 98% by building automated unit and integration test suites integrated with the CI/CD pipeline",
+        "Delivered 9 custom RESTful APIs consumed by internal teams"
+      ]
+    },
+    {
+      "name": "Spot Health",
+      "position": "Software Developer",
+      "startDate": "2022-07",
+      "endDate": "2022-12",
+      "location": "Remote",
+      "summary": "Django APIs for an early-stage health startup.",
+      "highlights": [
+        "Improved query performance ~25% by optimizing Django SQL queries critical to product support",
+        "Accelerated test reliability by developing reusable data factories that cut test-setup time by ~40%",
+        "Contributed to a full overhaul of the primary issue-tracking dashboard in collaboration with the product team"
+      ]
+    }
+  ],
+  "skills": [
+    { "name": "Languages", "keywords": ["Python", "JavaScript", "TypeScript", "Go"] },
+    { "name": "Backend", "keywords": ["Django", "Flask", "Node.js", "Express", "HTMX"] },
+    { "name": "Frontend", "keywords": ["React", "Next.js", "Three.js"] },
+    { "name": "Data", "keywords": ["PostgreSQL"] },
+    { "name": "Practices", "keywords": ["Unit & integration testing", "CI/CD", "Git/GitHub"] },
+    { "name": "AI Tooling", "keywords": ["Claude Code", "Cursor", "AI-assisted dev workflows"] },
+    { "name": "Infra", "keywords": ["Docker", "Vercel"] }
+  ],
+  "languages": [
+    { "language": "Spanish", "fluency": "Native speaker" },
+    { "language": "English", "fluency": "Advanced" }
+  ],
+  "projects": [
+    {
+      "name": "Firmamento & Firmamento-3D",
+      "description": "Full-stack web platform built and maintained end to end as sole developer: custom authentication, relational data modeling with the Django ORM, server-rendered UI, and an interactive 3D scene in Three.js.",
+      "keywords": ["Django", "PostgreSQL", "HTMX", "Three.js"]
+    },
+    {
+      "name": "Grimoire",
+      "description": "Desktop code editor with locally-run, GPU-powered LSP support, built to explore offline-first developer tooling.",
+      "keywords": ["Go", "React", "Wails"]
+    },
+    {
+      "name": "Hardware Lab",
+      "description": "Self-directed electronics project spanning PCB design, soldering and assembly, and 3D-printed enclosures.",
+      "keywords": ["Electronics", "PCB Design", "3D Printing"]
+    }
+  ]
+}

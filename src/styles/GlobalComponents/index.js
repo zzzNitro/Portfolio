@@ -1,4 +1,20 @@
+import Link from 'next/link'
 import styled from 'styled-components'
+
+// Visually hidden but present in the DOM — readable by crawlers and screen
+// readers, invisible to sighted users. Standard a11y "sr-only" pattern, not
+// cloaking: same content and destination as anything a visitor could reach.
+export const VisuallyHiddenLink = styled(Link)`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+`
 
 export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
@@ -87,6 +103,13 @@ export const SectionDivider = styled.div`
     height: 2px;
   }
 `
+export const Card = styled.div`
+  background: ${(props) => props.theme.colors.background2};
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  text-align: left;
+`
+
 export const SectionSubText = styled.p`
   max-width: 800px;
   font-weight: 300;

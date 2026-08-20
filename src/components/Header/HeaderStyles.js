@@ -1,4 +1,5 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -45,7 +46,7 @@ export const Div3 = styled.div`
 `;
 
 // Navigation Links
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   padding: 0.5rem;
   font-size: rem;
   line-height: 32px;

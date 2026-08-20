@@ -1,56 +1,62 @@
 import styled from 'styled-components';
+import { Card } from '../../styles/GlobalComponents';
 
 export const Img = styled.img`
-  width:100%;
-  height:100%;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  overflow: hidden;
 `
 
 export const GridContainer = styled.section`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+grid-template-columns: repeat(2, minmax(0, 1fr));
+justify-items: center;
 padding: 3rem;
-place-items: center;
 column-gap: 2rem;
 row-gap: 3rem;
+
+/* a lone trailing card (odd count) spans both columns and centers itself,
+   instead of sitting pinned to column 1 with an empty cell beside it */
+& > *:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 @media ${(props) => props.theme.breakpoints.sm} {
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: 1fr;
   padding: 2rem;
   padding-bottom: 0;
+  row-gap: 2rem;
 }
 `
-export const BlogCard = styled.div`
-  border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
-  text-align: center;
-  width: 400px;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
-  }
+export const BlogCard = styled(Card)`
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
 `;
 export const TitleContent = styled.div`
-  text-align: center;
+  text-align: left;
   z-index: 20;
   width: 100%;
+  padding: 24px 24px 0;
 `;
 
 
 export const HeaderThree = styled.h3`
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #9cc9e3;
-  padding: .5rem 0;
-  font-size: ${(props) => props.title ? '4rem' : '2.5rem'};
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: ${(props) => props.title ? '4rem' : '2rem'};
 `;
 
 export const Hr = styled.hr`
-  width: 50px;
+  width: 32px;
   height: 3px;
-  margin: 20px auto;
+  margin: 12px 0;
   border: 0;
-  background: #d0bb57;
+  background: ${props => props.theme.colors.accent1};
 `;
 
 export const Intro = styled.div`
@@ -66,81 +72,57 @@ export const Intro = styled.div`
 
 export const CardInfo = styled.p`
   width: 100%;
-  padding: 0 50px;
-  color: #e4e6e7;
-  font-style: 2rem;
+  padding: 0 24px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
   line-height: 24px;
-  text-align: justify;
+  text-align: left;
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 3rem
-  
-}
+    padding: 0 16px;
+  }
 `;
 
 
 export const UtilityList = styled.ul`
   list-style-type: none;
-  padding: 0;
+  padding: 0 24px 24px;
+  margin-top: auto;
   display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
+  gap: 12px;
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-}
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.4rem;
+  padding: 0.7rem 1.4rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  transition: 0.3s ease;
+  &:hover{
+    border-color: ${props => props.theme.colors.accent1};
+    color: ${props => props.theme.colors.accent1};
+  }
 `;
 
 export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 24px 0;
 `
 export const Tag = styled.li`
-padding: 0.5rem;
-color: #9fc5e8;
-font-size: 2rem;
-border: none;
-border-radius: 50px;
-color: #fff;
-display: flex;
-top: 0;
-left: 0;
-background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
-opacity: ${({ disabled }) => disabled ? '.5' : '1'};
-transition: .4s ease;
-font-size: ${({ alt }) => alt ? '20px' : '24px'};
-font-weight: 500;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-box-shadow: ${({ disabled }) => disabled ? 'inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3)' : 'none'};
-&:hover {
-  opacity: 0;
-}
-&:focus {
-  outline: none;
-}
-&:active {
-  opacity: 1;
-  box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
-}
-&:disabled{
-  background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
-  opacity: 0.5;
-  box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
-}
-@media ${(props) => props.theme.breakpoints.md} {
-  font-size: ${({ alt }) => alt ? '20px' : '16px'};
-}
-@media ${(props) => props.theme.breakpoints.sm} {
-  font-size: 14px;
-}
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.2rem;
+  }
 `

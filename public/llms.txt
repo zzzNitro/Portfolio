@@ -1,0 +1,29 @@
+# Pablo Benito
+
+> Full stack developer with 3+ years building production systems — Go microservices at Mercado Libre, Python/Django APIs at Spot Health. Ships end-to-end across React, Next.js, TypeScript, and PostgreSQL, using AI-assisted dev workflows (Claude Code, Cursor) with a clear understanding of the underlying code.
+
+## Profile
+
+- [Why I'm a fit for your team (experience & impact)](https://www.dexforge.com/fit)
+- [Structured résumé (JSON Resume format)](https://www.dexforge.com/resume.json)
+- [LinkedIn](https://www.linkedin.com/in/pablo-benito-nunez/)
+- [GitHub](https://github.com/zzzNitro)
+
+## Experience
+
+- Software Developer, Mercado Libre (Mar 2023–present) — Go microservices; ~50% response-time reduction; test coverage raised 85%→98%; 9 internal RESTful APIs delivered.
+- Software Developer, Spot Health (Jul–Dec 2022) — Django/PostgreSQL query optimization (~25% faster); reusable test data factories (~40% faster test setup).
+
+## Skills
+
+Python, JavaScript, TypeScript, Go, Django, Flask, Node.js, Express, HTMX, React, Next.js, Three.js, PostgreSQL, unit & integration testing, CI/CD, Git/GitHub, Claude Code, Cursor, Docker, Vercel.
+
+## Projects
+
+- Firmamento / Firmamento-3D — Django, PostgreSQL, HTMX, Three.js. Sole developer.
+- Grimoire — Go/React desktop code editor with a locally-run LSP.
+- Hardware Lab — electronics, PCB design, 3D printing.
+
+## Contact
+
+- Email: pablo.benito@rocketmail.com

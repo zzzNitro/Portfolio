@@ -35,7 +35,7 @@ const Projects = () => (
             {projects.map(
                 ({ id, image, title, description, tags, source, visit }) => (
                     <BlogCard key={id}>
-                        <Img src={image} alt={title} />
+                        {image ? <Img src={image} alt={title} /> : null}
                         <TitleContent>
                             <HeaderThree>{title}</HeaderThree>
                             <Hr></Hr>

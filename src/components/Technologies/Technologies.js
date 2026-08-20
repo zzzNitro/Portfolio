@@ -1,5 +1,6 @@
 import React from "react";
-import { DiFirebase, DiReact, DiGitMerge } from "react-icons/di";
+import { DiGo, DiReact, DiGitMerge } from "react-icons/di";
+import { RiRobotLine } from "react-icons/ri";
 import {
   Section,
   SectionDivider,
@@ -12,48 +13,70 @@ import {
   ListItem,
   ListParagraph,
   ListTitle,
+  StackText,
 } from "./TechnologiesStyles";
+import { skills } from "../../constants/profile";
+
+const allSkills = [
+  ...skills.languages,
+  ...skills.backend,
+  ...skills.frontend,
+  ...skills.data,
+  ...skills.practices,
+  ...skills.aiTooling,
+  ...skills.infra,
+].join(" · ");
 
 const Technologies = () => (
   <Section id="tech">
     <SectionDivider></SectionDivider>
     <SectionTitle main>Technologies</SectionTitle>
     <SectionText>
-      I've trained in Henry bootcamp for fullstack development with JavaScript and I have learned Python on the side. Django is my favorite framework for backend development.
+      Production experience with Go and Django backends, React/Next.js frontends, and PostgreSQL — with AI-assisted tooling built into daily workflow.
     </SectionText>
     <List>
       <ListItem>
-        <DiReact size="3rem" />
+        <DiGo size="3rem" />
         <ListContainer>
-          <ListTitle>Front-End</ListTitle>
+          <ListTitle>Backend</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            React.js
+            Go, Django, Python <br />
+            Node.js, Express, Flask
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiFirebase size="3rem" />
+        <DiReact size="3rem" />
         <ListContainer>
-          <ListTitle>Back-End</ListTitle>
+          <ListTitle>Frontend</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            Node & Django
+            React, Next.js <br />
+            TypeScript, Three.js
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <RiRobotLine size="3rem" />
+        <ListContainer>
+          <ListTitle>AI-Assisted Workflow</ListTitle>
+          <ListParagraph>
+            Claude Code, Cursor <br />
+            daily in production work
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
         <DiGitMerge size="3rem" />
         <ListContainer>
-          <ListTitle>CICD</ListTitle>
+          <ListTitle>Testing &amp; CI/CD</ListTitle>
           <ListParagraph>
-            Currenly training
-            <br />
-            Next for CI/CD
+            Unit &amp; integration testing <br />
+            CI/CD, Docker, Vercel
           </ListParagraph>
         </ListContainer>
       </ListItem>
     </List>
+    <StackText>{allSkills}</StackText>
   </Section>
 );
 

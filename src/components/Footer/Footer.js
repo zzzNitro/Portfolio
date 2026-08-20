@@ -11,21 +11,22 @@ import {
   Slogan,
   SocialIconsContainer,
 } from "./FooterStyles";
+import { person } from "../../constants/profile";
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper id="contact">
       <LinkList>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:pablo.benito@rocketmail.com">
+          <LinkItem href={`mailto:${person.email}`}>
             click to email me
           </LinkItem>
         </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>Dexterity is forged everyday</Slogan>
+          <Slogan>Open to new opportunities.</Slogan>
         </CompanyContainer>
         <SocialDetails></SocialDetails>
       </SocialIconsContainer>

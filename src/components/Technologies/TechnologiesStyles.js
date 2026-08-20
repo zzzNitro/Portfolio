@@ -29,7 +29,7 @@ export const MainImage = styled.img`
 export const List = styled.ul`
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin: 3rem 0;
   
@@ -102,6 +102,18 @@ export const ListItem = styled.li`
   max-width: 320px;
   flex-direction: row;
 }
+`
+
+export const StackText = styled.p`
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+  @media ${props => props.theme.breakpoints.sm}{
+    font-size: 12px;
+    line-height: 20px;
+  }
 `
 
 export const ListIcon = styled.img`

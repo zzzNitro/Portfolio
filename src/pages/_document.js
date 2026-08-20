@@ -1,5 +1,10 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import StructuredData from '../components/StructuredData/StructuredData'
+import { person } from '../constants/profile'
+import { pageMeta } from '../constants/pageMeta'
+
+const ogImage = `${person.siteUrl}/og-image.png`
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -16,6 +21,7 @@ export default class MyDocument extends Document {
       const initialProps = await Document.getInitialProps(ctx)
       return {
         ...initialProps,
+        pathname: ctx.pathname,
         styles: (
           <>
             {initialProps.styles}
@@ -28,27 +34,40 @@ export default class MyDocument extends Document {
     }
   }
   render() {
+    const meta = pageMeta[this.props.pathname] || pageMeta['/']
+    const { title, description } = meta
+    const canonicalUrl = person.siteUrl + this.props.pathname
+
     return (
       <Html lang='en-GB'>
         <Head>
           {/* <!-- Primary Meta Tags --> */}
-          <title>Pablo's Dexforge</title>
-          <meta name="title" content="Pablo's Dexforge" />
-          <meta name="description" content="Who is Pablo? Find out here!" />
+          <meta name="title" content={title} />
+          <meta name="description" content={description} />
+          <link rel="canonical" href={canonicalUrl} />
 
           {/* <!-- Open Graph / Facebook --> */}
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://pbreactprtfl.herokuapp.com/" />
-          <meta property="og:title" content="Pablo's Dexforge" />
-          <meta property="og:description" content="Who is Pablo? Find out here!" />
-          <meta property="og:image" content="https://www.canva.com/design/DAFDj9zaj8E/n43MxTAKOovUzpoSxtoJRA/view?utm_content=DAFDj9zaj8E&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" />
+          <meta property="og:type" content="profile" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:image" content={ogImage} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
 
           {/* <!-- Twitter --> */}
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://pbreactprtfl.herokuapp.com/" />
-          <meta property="twitter:title" content="Pablo's Dexforge" />
-          <meta property="twitter:description" content="Who is Pablo? Find out here!" />
-          <meta property="twitter:image" content="https://www.canva.com/design/DAFDj9zaj8E/n43MxTAKOovUzpoSxtoJRA/view?utm_content=DAFDj9zaj8E&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" />
+          <meta property="twitter:url" content={canonicalUrl} />
+          <meta property="twitter:title" content={title} />
+          <meta property="twitter:description" content={description} />
+          <meta property="twitter:image" content={ogImage} />
+
+          {/* <!-- Machine-readable / agentic discoverability --> */}
+          <link rel="alternate" type="application/json" href="/resume.json" title="Résumé (JSON Resume)" />
+          {this.props.pathname === '/' && (
+            <link rel="related" href={person.siteUrl + '/fit'} title={pageMeta['/fit'].title} />
+          )}
+          <StructuredData />
         </Head>
         <body>
           <Main />
