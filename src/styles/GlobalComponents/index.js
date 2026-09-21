@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 // Visually hidden but present in the DOM — readable by crawlers and screen
 // readers, invisible to sighted users. Standard a11y "sr-only" pattern, not
@@ -26,6 +26,13 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  ${(props) =>
+    props.fullHeight &&
+    css`
+      min-height: 100vh;
+      justify-content: center;
+      align-content: center;
+    `}
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
     flex-direction: column;

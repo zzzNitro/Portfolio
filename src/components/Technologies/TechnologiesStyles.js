@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const ImageContainer = styled.div`
   text-align: center;
@@ -94,8 +94,12 @@ export const ListItem = styled.li`
   max-width: 320px;
   display: flex;
   flex-direction: column;
+  ${(props) => props.$spanFull && css`
+    max-width: none;
+    grid-column: 1 / -1;
+  `}
 @media ${props => props.theme.breakpoints.md}{
-  max-width: 203px;
+  max-width: ${(props) => props.$spanFull ? 'none' : '203px'};
 }
 @media ${props => props.theme.breakpoints.sm}{
   margin-bottom: 14px;

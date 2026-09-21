@@ -1,6 +1,6 @@
 import React from "react";
 import { DiGo, DiReact, DiGitMerge } from "react-icons/di";
-import { RiRobotLine } from "react-icons/ri";
+import { AiOutlineTeam, AiOutlineMessage } from "react-icons/ai";
 import {
   Section,
   SectionDivider,
@@ -23,16 +23,17 @@ const allSkills = [
   ...skills.frontend,
   ...skills.data,
   ...skills.practices,
-  ...skills.aiTooling,
+  ...skills.waysOfWork,
+  ...skills.softSkills,
   ...skills.infra,
 ].join(" · ");
 
 const Technologies = () => (
-  <Section id="tech">
+  <Section id="tech" fullHeight>
     <SectionDivider></SectionDivider>
     <SectionTitle main>Technologies</SectionTitle>
     <SectionText>
-      Production experience with Go and Django backends, React/Next.js frontends, and PostgreSQL — with AI-assisted tooling built into daily workflow.
+      Production experience with Go and Django backends, React/Next.js frontends, and PostgreSQL, delivered in Scrum/Kanban teams with regular code review and cross-team collaboration.
     </SectionText>
     <List>
       <ListItem>
@@ -56,12 +57,12 @@ const Technologies = () => (
         </ListContainer>
       </ListItem>
       <ListItem>
-        <RiRobotLine size="3rem" />
+        <AiOutlineTeam size="3rem" />
         <ListContainer>
-          <ListTitle>AI-Assisted Workflow</ListTitle>
+          <ListTitle>Way of Work</ListTitle>
           <ListParagraph>
-            Claude Code, Cursor <br />
-            daily in production work
+            Scrum, Kanban, sprint planning <br />
+            Code review, cross-team collaboration
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -71,7 +72,17 @@ const Technologies = () => (
           <ListTitle>Testing &amp; CI/CD</ListTitle>
           <ListParagraph>
             Unit &amp; integration testing <br />
-            CI/CD, Docker, Vercel
+            CI/CD, Docker, Vercel, AI-assisted tooling
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem $spanFull>
+        <AiOutlineMessage size="3rem" />
+        <ListContainer>
+          <ListTitle>Soft Skills</ListTitle>
+          <ListParagraph>
+            Assertive communication <br />
+            Ownership, adaptability
           </ListParagraph>
         </ListContainer>
       </ListItem>

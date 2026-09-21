@@ -16,7 +16,10 @@ const Hero = (props) => (
         {person.name}
       </SectionTitle>
       <SectionText>{person.tagline}</SectionText>
-      <Button onClick={() => (window.location = "#contact")}>Get in Touch</Button>
+      {/* id lets the Header observe when this CTA scrolls out of view */}
+      <div id="hero-cta">
+        <Button onClick={() => (window.location = "#contact")}>Get in Touch</Button>
+      </div>
     </LeftSection>
   </Section>
 );

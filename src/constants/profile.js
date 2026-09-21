@@ -5,7 +5,7 @@
 
 const person = {
   name: 'Pablo Benito',
-  role: 'Full Stack Developer',
+  role: 'Anti Enshittification Developer',
   location: { city: 'Santiago', country: 'Chile' },
   email: 'pablo.benito@rocketmail.com',
   siteUrl: 'https://www.dexforge.com',
@@ -13,9 +13,9 @@ const person = {
   linkedin: 'https://www.linkedin.com/in/pablo-benito-nunez/',
   tagline: 'Full Stack Developer | Go, Python, JS/TS, SQL',
   metaDescription:
-    'Full stack developer with 3+ years shipping production systems — Go microservices at Mercado Libre, Django APIs at Spot Health. React, Next.js, TypeScript, PostgreSQL, AI-assisted dev workflows.',
+    'Full stack developer with 3+ years shipping production systems — Go microservices at Mercado Libre, Django APIs at Spot Health. React, Next.js, TypeScript, PostgreSQL.',
   summary:
-    "Full stack developer with 3+ years building production systems: Go microservices at Mercado Libre and Python/Django APIs at an early-stage health startup. I ship end-to-end features across React, Next.js, TypeScript, and PostgreSQL. AI development tools such as Claude Code and Cursor are part of my daily workflow, applied with a clear understanding of what the code is doing. I have a track record of taking side projects from concept to working product, a strong grounding in automated testing, CI/CD, and clean, scalable architecture, and I deliver independently in small, fast-moving teams where priorities shift.",
+    "Full stack developer with 3+ years building production systems: Go microservices at Mercado Libre and Python/Django APIs at an early-stage health startup. I ship end-to-end features across React, Next.js, TypeScript, and PostgreSQL, working in Scrum/Kanban teams with sprint planning, code review, and cross-team collaboration at every job I've held. I have a track record of taking side projects from concept to working product, a strong grounding in automated testing, CI/CD, and clean, scalable architecture, and I deliver independently in small, fast-moving teams where priorities shift.",
 }
 
 const experience = [
@@ -55,8 +55,9 @@ const skills = {
   backend: ['Django', 'Flask', 'Node.js', 'Express', 'HTMX'],
   frontend: ['React', 'Next.js', 'Three.js'],
   data: ['PostgreSQL'],
-  practices: ['Unit & integration testing', 'CI/CD', 'Git/GitHub'],
-  aiTooling: ['Claude Code', 'Cursor', 'AI-assisted dev workflows'],
+  practices: ['Unit & integration testing', 'CI/CD', 'Git/GitHub', 'AI-assisted tooling'],
+  waysOfWork: ['Scrum', 'Kanban', 'Sprint planning', 'Code review', 'Cross-team collaboration'],
+  softSkills: ['Assertive communication', 'Ownership', 'Adaptability'],
   infra: ['Docker', 'Vercel'],
   spokenLanguages: [
     { lang: 'Spanish', level: 'native' },

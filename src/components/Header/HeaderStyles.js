@@ -1,6 +1,6 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
@@ -30,6 +30,35 @@ export const Div2 = styled.div`
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
   justify-content: space-around;
+  z-index: 20;
+
+  li {
+    display: flex;
+  }
+
+  ${(props) =>
+    props.$scrolled &&
+    css`
+      position: fixed;
+      top: 50%;
+      right: ${(props) => props.$rightOffset ?? 24}px;
+      transform: translateY(-50%);
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.25rem;
+      padding: 1rem 0.75rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 22, 36, 0.9);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+      li {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    `}
+
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 2 / 2 / 3 / 5;
   }
@@ -116,5 +145,28 @@ border-radius: 50px;
     transform: scale(1.2);
     cursor: pointer;
     
+  }
+`
+
+// Floating CTA docked in the vertical nav once the Hero CTA scrolls offscreen
+export const FloatingCta = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-align: center;
+  background: linear-gradient(270deg, #00dbd8 0%, #b133ff 100%);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
   }
 `
