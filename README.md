@@ -21,8 +21,8 @@ npm i && npm run dev
 
 - 🌌 I’m a Fullstack Developer from Chile 
 - 🔭 I’m currently working on [Personality Feed]
-- 🌱 I’m currently learning **Solidity** and **MongoDB**
-- 💬 Ask me about **react, django, node, TDD,  jest**
+- 🌱 I’m currently learning **Zig**
+- 💬 Ask me about **go, react, django, node, TDD**
 - 📫 How to reach me **pablo.benito@rocketmail.com**
 - ⚡ Fun fact **I've led over 20 people in competitive gaming and reached top 10% on Warframe leaderboards**
 
