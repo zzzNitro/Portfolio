@@ -3,6 +3,7 @@ import React from 'react'
 import {
     BlogCard,
     CardInfo,
+    CardOverlayLink,
     ExternalLinks,
     GridContainer,
     HeaderThree,
@@ -35,6 +36,12 @@ const Projects = () => (
             {projects.map(
                 ({ id, image, title, description, tags, source, visit }) => (
                     <BlogCard key={id}>
+                        {
+                            visit && visit !== '' ?
+                            <CardOverlayLink href={visit} target="_blank" rel="noopener noreferrer" aria-label={`${title} — view live app`} />
+                            :
+                            null
+                        }
                         {image ? <Img src={image} alt={title} /> : null}
                         <TitleContent>
                             <HeaderThree>{title}</HeaderThree>

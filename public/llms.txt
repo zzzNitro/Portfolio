@@ -20,7 +20,7 @@ Python, JavaScript, TypeScript, Go, Django, Flask, Node.js, Express, HTMX, React
 
 ## Projects
 
-- Firmamento / Firmamento-3D — Django, PostgreSQL, HTMX, Three.js. Sole developer.
+- [Firmamento / Firmamento-3D](https://ortolandecristal.pablobenito.cl) — Django, PostgreSQL, HTMX, Three.js. Sole developer.
 - Grimoire — Go/React desktop code editor with a locally-run LSP.
 - Hardware Lab — electronics, PCB design, 3D printing.
 

@@ -69,6 +69,7 @@
     {
       "name": "Firmamento & Firmamento-3D",
       "description": "Full-stack web platform built and maintained end to end as sole developer: custom authentication, relational data modeling with the Django ORM, server-rendered UI, and an interactive 3D scene in Three.js.",
+      "url": "https://ortolandecristal.pablobenito.cl",
       "keywords": ["Django", "PostgreSQL", "HTMX", "Three.js"]
     },
     {

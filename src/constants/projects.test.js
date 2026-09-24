@@ -15,7 +15,7 @@ test('Project details are correct', () => {
           "Three.js",
         ],
         "title": "Firmamento & Firmamento-3D",
-        "visit": "",
+        "visit": "https://ortolandecristal.pablobenito.cl",
       },
       Object {
         "description": "Desktop code editor with locally-run, GPU-powered LSP support, built to explore offline-first developer tooling. Shipped a working first version on Wails and currently migrating the editor core to Monaco.",

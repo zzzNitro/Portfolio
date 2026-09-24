@@ -35,6 +35,15 @@ export const BlogCard = styled(Card)`
   overflow: hidden;
   width: 100%;
   max-width: 400px;
+  position: relative;
+`;
+
+// Stretched link: covers the whole card so the card itself is clickable.
+// Kept below the UtilityList (z-index: 2) so the pill links stay clickable.
+export const CardOverlayLink = styled.a`
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 `;
 export const TitleContent = styled.div`
   text-align: left;
@@ -89,6 +98,8 @@ export const UtilityList = styled.ul`
   margin-top: auto;
   display: flex;
   gap: 12px;
+  position: relative;
+  z-index: 2;
 `;
 
 export const ExternalLinks = styled.a`

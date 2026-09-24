@@ -75,7 +75,7 @@ const projects = [
     image: '/images/firmamento.png',
     tags: ['Django', 'PostgreSQL', 'HTMX', 'Three.js'],
     source: '',
-    visit: '',
+    visit: 'https://ortolandecristal.pablobenito.cl',
   },
   {
     id: 1,
